@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- METADATA -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/gameList.css" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+
+    <!-- TITLE -->
+    <title>Game Store</title>
+  </head>
+
+  <body>
+    <!------------------------------>
+    <!----------- HEADER ----------->
+    <!------------------------------>
+    <div class="header">
+      <!-- LOGO -->
+      <strong>GAME STORE</strong>
+
+      <!-- USER INFORAMTION -->
+      <div class="user-data-on-header-container">
+        <!-- USER AND AUTHORITY -->
+        <span class="mx-3">Joaquin Coronado <strong>(ADMIN)</strong></span>
+
+        <!------------------------------------->
+        <!----------- LOGOUT BUTTON ----------->
+        <!------------------------------------->
+        <form>
+          <button class="btn btn-light btn-sm">Logout</button>
+        </form>
+      </div>
+    </div>
+
+    <!-------------------------------------->
+    <!----------- MAIN CONTAINER ----------->
+    <!-------------------------------------->
+    <div class="main-container">
+      <!-------------------------------->
+      <!----------- CONTROLS ----------->
+      <!-------------------------------->
+      <div class="controls">
+        <!-- SECTION NAME -->
+        <span>Games</span>
+
+        <!--------------------------------------->
+        <!----------- ADD GAME BUTTON ----------->
+        <!--------------------------------------->
+        <div>
+          <form>
+            <button class="btn btn-primary">Add</button>
+          </form>
+        </div>
+      </div>
+
+      <!--------------------------------->
+      <!----------- GAME LIST ----------->
+      <!--------------------------------->
+      <div class="content-container">
+        <table class="table table-hover">
+          <!-- TABLE HEADER -->
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Image</th>
+              <th scope="col">Title</th>
+              <th scope="col">Type</th>
+              <th scope="col">Price</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+
+          <!-- TABLE BODY -->
+          <tbody class="align-middle">
+            <!-- ROW #1 -->
+            <tr>
+              <!-- GAME ID -->
+              <th scope="row">1</th>
+
+              <!-- GAME IMAGE -->
+              <td>
+                <div class="image-in-row">
+                  <img
+                    src="https://i.3djuegos.com/juegos/2530/ninja_gaiden_2/fotos/ficha/ninja_gaiden_2-1686577.webp"
+                  />
+                </div>
+              </td>
+
+              <!-- TITLE -->
+              <td>Ninja Gaiden 2</td>
+
+              <!-- TYPE -->
+              <td>Hack and slash</td>
+
+              <!-- PRICE -->
+              <td>$1500.00</td>
+
+              <!------------------------------------>
+              <!----------- GAME ACTIONS ----------->
+              <!------------------------------------>
+              <td>
+                <div>
+                  <form>
+                    <!-- UPDATE GAME BUTTON -->
+                    <button class="btn btn-success btn-sm">Update</button>
+                    <!-- DELETE GAME BUTTON -->
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+            <!-- ROW #2 -->
+            <tr>
+              <th scope="row">2</th>
+              <td>
+                <div class="image-in-row">
+                  <img
+                    src="https://pbs.twimg.com/media/EmxcswgW4AATaQ-?format=jpg&name=large"
+                  />
+                </div>
+              </td>
+              <td>God of War: Ragnarök</td>
+              <td>Hack and slash</td>
+              <td>$1800.00</td>
+              <td>
+                <div>
+                  <form>
+                    <button class="btn btn-success btn-sm">Update</button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+            <!-- ROW #3 -->
+            <tr>
+              <th scope="row">3</th>
+              <td>
+                <div class="image-in-row">
+                  <img
+                    src="https://image.api.playstation.com/vulcan/ap/rnd/202101/0812/FkzwjnJknkrFlozkTdeQBMub.png"
+                  />
+                </div>
+              </td>
+              <td>Resident Evil Village</td>
+              <td>Horror</td>
+              <td>$1300.00</td>
+              <td>
+                <div>
+                  <form>
+                    <button class="btn btn-success btn-sm">Update</button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

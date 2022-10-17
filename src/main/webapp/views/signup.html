@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- METADATA -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    
+    <!-- TITLE -->
+    <title>SignUp - Game Store</title>
+  </head>
+
+  <body>
+    
+    <!------------------------------>
+    <!----------- HEADER ----------->
+    <!------------------------------>
+    <div class="header" style="height: 10px">.</div>
+    
+    <!-------------------------------------->
+    <!----------- MAIN CONTAINER ----------->
+    <!-------------------------------------->
+    <div class="container-custom">
+      <div class="login-form-container">
+        <div class="login-title-container">SignUp</div>
+        
+        <!----------------------------------->
+        <!----------- SIGNUP FORM ----------->
+        <!----------------------------------->
+        <form>
+
+          <!-- EMAIL -->
+          <div class="mb-3">
+            <label class="form-label" for="email">Email address</label>
+            <input
+              type="email"
+              required
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+            />
+          </div>
+
+          <!-- FULL NAME -->
+          <div class="mb-3">
+            <label class="form-label" for="name">Full name</label>
+            <input required type="email" class="form-control" id="name" />
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="mb-4">
+            <label class="form-label" for="exampleInputPassword1"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              required
+              id="exampleInputPassword1"
+            />
+          </div>
+
+          <!-- CREATE ACCOUNT BUTTON -->
+          <button type="submit" class="btn btn-primary w-100 mb-3">
+            Create account
+          </button>
+        </form>
+
+        <!--------------------------------------------->
+        <!----------- I HAVE ACCOUNT BUTTON ----------->
+        <!--------------------------------------------->
+        <form>
+          <button type="submit" class="btn btn-secondary w-100">
+            I have an account
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

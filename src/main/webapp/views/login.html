@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- METADATA -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/static/styles.css}" />
+    <link rel="stylesheet" th:href="@{/static/login.css}" />
+    <link rel="stylesheet" th:href="@{/static/bootstrap/bootstrap.min.css}" />
+
+    <!-- TITLE -->
+    <title>Login - Game Store</title>
+  </head>
+  <body>
+    <!------------------------------>
+    <!----------- HEADER ----------->
+    <!------------------------------>
+    <div class="header" style="height: 10px">.</div>
+
+    <!-------------------------------------->
+    <!----------- MAIN CONTAINER ----------->
+    <!-------------------------------------->
+    <div class="container-custom">
+      <div class="login-form-container">
+        <div class="login-title-container">Login</div>
+
+        <!---------------------------->
+        <!----------- FORM ----------->
+        <!---------------------------->
+        <form>
+          <!-- EMAIL -->
+          <div class="mb-3">
+            <label class="form-label" for="exampleInputEmail1"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="mb-4">
+            <label class="form-label" for="exampleInputPassword1"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              required
+              id="exampleInputPassword1"
+            />
+          </div>
+
+          <!-- LOGIN BUTTON -->
+          <button type="submit" class="btn btn-primary w-100 mb-3">
+            Login
+          </button>
+
+          <!-- SIGNUP BUTTON -->
+          <button type="submit" class="btn btn-secondary w-100">SignUp</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- METADATA -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/createGame.css" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+
+    <!-- TITLE -->
+    <title>Game Store</title>
+  </head>
+  <body>
+    <!------------------------------>
+    <!----------- HEADER ----------->
+    <!------------------------------>
+    <div class="header">
+      <!-- LOGO -->
+      <strong>GAME STORE</strong>
+
+      <!-- USER INFORAMTION -->
+      <div class="user-data-on-header-container">
+        <!-- USER AND AUTHORITY -->
+        <span class="mx-3">Joaquin Coronado <strong>(ADMIN)</strong></span>
+
+        <!------------------------------------->
+        <!----------- LOGOUT BUTTON ----------->
+        <!------------------------------------->
+        <form>
+          <button class="btn btn-light btn-sm">Logout</button>
+        </form>
+      </div>
+    </div>
+
+    <!-------------------------------------->
+    <!----------- MAIN CONTAINER ----------->
+    <!-------------------------------------->
+    <div class="main-container">
+      <!-------------------------------->
+      <!----------- CONTROLS ----------->
+      <!-------------------------------->
+      <div class="controls">
+        <!-- SECTION NAME -->
+        <span>Save Games</span>
+
+        <!--------------------------------------->
+        <!----------- RETURN BUTTON ----------->
+        <!--------------------------------------->
+        <div>
+          <form>
+            <button class="btn btn-outline-secondary">Return</button>
+          </form>
+        </div>
+      </div>
+
+      <!--------------------------------->
+      <!----------- GAME FORM ----------->
+      <!--------------------------------->
+      <div class="content-container">
+        <div class="add-game-form-container">
+          <form>
+            <!-- TITLE -->
+            <div class="mb-3 w-100">
+              <label class="form-label" for="title">Title</label>
+              <input type="text" required class="form-control" id="title" />
+            </div>
+
+            <!-- TYPE -->
+            <div class="mb-3">
+              <label class="form-label" for="type">Type</label>
+              <input required type="text" class="form-control" id="type" />
+            </div>
+
+            <!-- PRICE -->
+            <div class="mb-3">
+              <label class="form-label" for="price">Price</label>
+              <input type="number" class="form-control" required id="price" />
+            </div>
+
+            <!-- URL IMAGE -->
+            <div class="mb-4">
+              <label class="form-label" for="image">URL image</label>
+              <input required type="text" class="form-control" id="image" />
+            </div>
+
+            <!-- SAVE GAME BUTTON -->
+            <button type="submit" class="btn btn-primary w-100 mb-3">
+              Save Game
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
