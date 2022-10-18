@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <!-- METADATA -->
     <meta charset="utf-8" />
@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/gameList.css" />
-    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" th:href="@{/static/styles.css}" />
+    <link rel="stylesheet" th:href="@{/static/gameList.css}" />
+    <link rel="stylesheet" th:href="@{/static/bootstrap/bootstrap.min.css}" />
 
     <!-- TITLE -->
     <title>Game Store</title>
@@ -31,7 +31,7 @@
         <!------------------------------------->
         <!----------- LOGOUT BUTTON ----------->
         <!------------------------------------->
-        <form>
+        <form th:action="@{/login}">
           <button class="btn btn-light btn-sm">Logout</button>
         </form>
       </div>
@@ -52,7 +52,7 @@
         <!----------- ADD GAME BUTTON ----------->
         <!--------------------------------------->
         <div>
-          <form>
+          <form th:action="@{/game/create}">
             <button class="btn btn-primary">Add</button>
           </form>
         </div>
@@ -105,12 +105,15 @@
               <!------------------------------------>
               <td>
                 <div>
-                  <form>
+                  <form th:action="@{/game/update}">
                     <!-- UPDATE GAME BUTTON -->
                     <button class="btn btn-success btn-sm">Update</button>
-                    <!-- DELETE GAME BUTTON -->
+				  </form>
+				  <form>
+				  	  <!-- DELETE GAME BUTTON -->
                     <button class="btn btn-danger btn-sm">Delete</button>
-                  </form>
+				  </form>
+                
                 </div>
               </td>
             </tr>
@@ -129,8 +132,10 @@
               <td>$1800.00</td>
               <td>
                 <div>
-                  <form>
+                  <form th:action="@{/game/update}">
                     <button class="btn btn-success btn-sm">Update</button>
+                  </form>
+                  <form>
                     <button class="btn btn-danger btn-sm">Delete</button>
                   </form>
                 </div>
@@ -151,8 +156,10 @@
               <td>$1300.00</td>
               <td>
                 <div>
-                  <form>
+                  <form th:action="@{/game/update}">
                     <button class="btn btn-success btn-sm">Update</button>
+                  </form>
+                  <form>
                     <button class="btn btn-danger btn-sm">Delete</button>
                   </form>
                 </div>

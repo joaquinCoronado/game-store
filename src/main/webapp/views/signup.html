@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     
     <!-- METADATA -->
@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/login.css" />
-    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" th:href="@{/static/styles.css}" />
+    <link rel="stylesheet" th:href="@{/static/login.css}" />
+    <link rel="stylesheet" th:href="@{/static/bootstrap/bootstrap.min.css}" />
     
     <!-- TITLE -->
     <title>SignUp - Game Store</title>
@@ -33,7 +33,7 @@
         <!----------------------------------->
         <!----------- SIGNUP FORM ----------->
         <!----------------------------------->
-        <form>
+        <form th:action="@{/game/list}">
 
           <!-- EMAIL -->
           <div class="mb-3">
@@ -68,14 +68,14 @@
 
           <!-- CREATE ACCOUNT BUTTON -->
           <button type="submit" class="btn btn-primary w-100 mb-3">
-            Create account
+            Create accounts
           </button>
         </form>
 
         <!--------------------------------------------->
         <!----------- I HAVE ACCOUNT BUTTON ----------->
         <!--------------------------------------------->
-        <form>
+        <form th:action="@{/login}">
           <button type="submit" class="btn btn-secondary w-100">
             I have an account
           </button>

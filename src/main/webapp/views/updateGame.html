@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <!-- METADATA -->
     <meta charset="utf-8" />
@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/createGame.css" />
-    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" th:href="@{/static/styles.css}" />
+    <link rel="stylesheet" th:href="@{/static/createGame.css}" />
+    <link rel="stylesheet" th:href="@{/static/bootstrap/bootstrap.min.css}" />
 
     <!-- TITLE -->
     <title>Game Store</title>
@@ -30,7 +30,7 @@
         <!------------------------------------->
         <!----------- LOGOUT BUTTON ----------->
         <!------------------------------------->
-        <form>
+        <form th:action="@{/login}">
           <button class="btn btn-light btn-sm">Logout</button>
         </form>
       </div>
@@ -51,7 +51,7 @@
         <!----------- RETURN BUTTON ----------->
         <!--------------------------------------->
         <div>
-          <form>
+          <form th:action="@{/game/list}">
             <button class="btn btn-outline-secondary">Return</button>
           </form>
         </div>
@@ -62,7 +62,7 @@
       <!--------------------------------->
       <div class="content-container">
         <div class="add-game-form-container">
-          <form>
+          <form th:action="@{/game/list}">
             <!-- TITLE -->
             <div class="mb-3 w-100">
               <label class="form-label" for="title">Title</label>

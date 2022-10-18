@@ -30,12 +30,10 @@
         <!---------------------------->
         <!----------- FORM ----------->
         <!---------------------------->
-        <form>
+        <form th:action="@{/game/list}">
           <!-- EMAIL -->
           <div class="mb-3">
-            <label class="form-label" for="exampleInputEmail1"
-              >Email address</label
-            >
+            <label class="form-label" for="exampleInputEmail1">Email address</label>
             <input
               type="email"
               class="form-control"
@@ -61,9 +59,10 @@
           <button type="submit" class="btn btn-primary w-100 mb-3">
             Login
           </button>
-
-          <!-- SIGNUP BUTTON -->
-          <button type="submit" class="btn btn-secondary w-100">SignUp</button>
+        </form>
+         <!-- SIGNUP BUTTON -->
+        <form th:action="@{/signup}">
+        	<button type="submit" class="btn btn-secondary w-100">SignUp</button>
         </form>
       </div>
     </div>
