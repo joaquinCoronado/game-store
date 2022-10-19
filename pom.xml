@@ -12,6 +12,7 @@
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
+		<spring.version>5.3.22</spring.version>
 	</properties>
 
 	<dependencies>
@@ -20,7 +21,27 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>5.3.22</version>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- SPRING DATA JDBC -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jdbc</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
+		<!-- MYSQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
 		</dependency>
 
 		<!-- thymeleaf -->
@@ -51,13 +72,14 @@
 			<scope>provided</scope>
 		</dependency>
 
-
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.8.1</version>
 			<scope>test</scope>
 		</dependency>
+
+
 	</dependencies>
 	<build>
 		<finalName>sf-gamestore</finalName>

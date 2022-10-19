@@ -15,7 +15,7 @@ public class Initializer implements WebApplicationInitializer{
 
 		//Load spring configuration
 		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-		ctx.register(WebAppConfig.class);
+		ctx.register(WebAppConfig.class, SpringDataJDBCConfig.class);
 		ctx.setServletContext(servletContext);
 		
 		//Create DispatcherServlet
