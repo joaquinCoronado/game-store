@@ -62,29 +62,29 @@
       <!--------------------------------->
       <div class="content-container">
         <div class="add-game-form-container">
-          <form th:action="@{/game/list}">
+          <form  th:action="@{/game/create}" th:method="post" th:object="${game}">
             <!-- TITLE -->
             <div class="mb-3 w-100">
               <label class="form-label" for="title">Title</label>
-              <input type="text" required class="form-control" id="title" />
+              <input th:field="*{title}" type="text" required class="form-control" id="title" />
             </div>
 
             <!-- TYPE -->
             <div class="mb-3">
               <label class="form-label" for="type">Type</label>
-              <input required type="text" class="form-control" id="type" />
+              <input th:field="*{type}" required type="text" class="form-control" id="type" />
             </div>
 
             <!-- PRICE -->
             <div class="mb-3">
               <label class="form-label" for="price">Price</label>
-              <input type="number" class="form-control" required id="price" />
+              <input th:field="*{price}" type="number" class="form-control" required id="price" />
             </div>
 
             <!-- URL IMAGE -->
             <div class="mb-4">
               <label class="form-label" for="image">URL image</label>
-              <input required type="text" class="form-control" id="image" />
+              <input th:field="*{image}" required type="text" class="form-control" id="image" />
             </div>
 
             <!-- SAVE GAME BUTTON -->

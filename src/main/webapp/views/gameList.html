@@ -78,34 +78,32 @@
           <!-- TABLE BODY -->
           <tbody class="align-middle">
             <!-- ROW #1 -->
-            <tr>
+            <tr th:each="game : ${gameList}">
               <!-- GAME ID -->
-              <th scope="row">1</th>
+              <th th:text="${game.id}" />
 
               <!-- GAME IMAGE -->
               <td>
                 <div class="image-in-row">
-                  <img
-                    src="https://i.3djuegos.com/juegos/2530/ninja_gaiden_2/fotos/ficha/ninja_gaiden_2-1686577.webp"
-                  />
+                  <img th:src="${game.image}"/>
                 </div>
               </td>
 
               <!-- TITLE -->
-              <td>Ninja Gaiden 2</td>
+              <td th:text="${game.title}"/>
 
               <!-- TYPE -->
-              <td>Hack and slash</td>
+              <td th:text="${game.type}"/>
 
               <!-- PRICE -->
-              <td>$1500.00</td>
+              <td th:text="${game.price}"/>
 
               <!------------------------------------>
               <!----------- GAME ACTIONS ----------->
               <!------------------------------------>
               <td>
-                <div>
-                  <form th:action="@{/game/update}">
+                <div style="display: flex">
+                  <form style="margin-right: 5px;" th:action="@{/game/update}">
                     <!-- UPDATE GAME BUTTON -->
                     <button class="btn btn-success btn-sm">Update</button>
 				  </form>
@@ -117,54 +115,7 @@
                 </div>
               </td>
             </tr>
-            <!-- ROW #2 -->
-            <tr>
-              <th scope="row">2</th>
-              <td>
-                <div class="image-in-row">
-                  <img
-                    src="https://pbs.twimg.com/media/EmxcswgW4AATaQ-?format=jpg&name=large"
-                  />
-                </div>
-              </td>
-              <td>God of War: Ragnarök</td>
-              <td>Hack and slash</td>
-              <td>$1800.00</td>
-              <td>
-                <div>
-                  <form th:action="@{/game/update}">
-                    <button class="btn btn-success btn-sm">Update</button>
-                  </form>
-                  <form>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                  </form>
-                </div>
-              </td>
-            </tr>
-            <!-- ROW #3 -->
-            <tr>
-              <th scope="row">3</th>
-              <td>
-                <div class="image-in-row">
-                  <img
-                    src="https://image.api.playstation.com/vulcan/ap/rnd/202101/0812/FkzwjnJknkrFlozkTdeQBMub.png"
-                  />
-                </div>
-              </td>
-              <td>Resident Evil Village</td>
-              <td>Horror</td>
-              <td>$1300.00</td>
-              <td>
-                <div>
-                  <form th:action="@{/game/update}">
-                    <button class="btn btn-success btn-sm">Update</button>
-                  </form>
-                  <form>
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                  </form>
-                </div>
-              </td>
-            </tr>
+ 
           </tbody>
         </table>
       </div>

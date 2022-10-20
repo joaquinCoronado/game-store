@@ -52,7 +52,7 @@ public class GameMySQLDaoImpl implements IGameDao{
 				PreparedStatement ps = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 				ps.setString(1, game.getTitle());
 				ps.setString(2, game.getType());
-				ps.setDouble(3, game.getPrice());
+				ps.setDouble(3, game.getPrice() != null ? game.getPrice() : 0L);
 				ps.setString(4, game.getImage());
 				ps.setTimestamp(5, Timestamp.valueOf(game.getCreatedAt()));
 				return ps;
