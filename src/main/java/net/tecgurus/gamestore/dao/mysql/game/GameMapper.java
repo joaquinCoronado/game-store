@@ -12,7 +12,7 @@ import net.tecgurus.gamestore.model.Game;
 
 public class GameMapper implements RowMapper<Game>{
 	
-	public LocalDateTime toLocalDateTime(Date date) {
+	public static LocalDateTime toLocalDateTime(Date date) {
 		return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 	}
 
@@ -27,12 +27,12 @@ public class GameMapper implements RowMapper<Game>{
 		
 		if(rs.getTimestamp("updated_at") != null) {
 			Date updatedAt = new Date(rs.getTimestamp("updated_at").getTime());
-			game.setUpdatedAt(this.toLocalDateTime(updatedAt));
+			game.setUpdatedAt(GameMapper.toLocalDateTime(updatedAt));
 		}
 		
 		if(rs.getTimestamp("created_at") != null) {
 			Date createdAt = new Date(rs.getTimestamp("created_at").getTime());
-			game.setCreatedAt(this.toLocalDateTime(createdAt));
+			game.setCreatedAt(GameMapper.toLocalDateTime(createdAt));
 		}
 		
 		return game;

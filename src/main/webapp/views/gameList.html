@@ -103,15 +103,14 @@
               <!------------------------------------>
               <td>
                 <div style="display: flex">
-                  <form style="margin-right: 5px;" th:action="@{/game/update}">
+                  <form style="margin-right: 5px;" th:action="@{/game/update/{id}(id=${game.id})}">
                     <!-- UPDATE GAME BUTTON -->
                     <button class="btn btn-success btn-sm">Update</button>
 				  </form>
-				  <form>
+				  <form th:action="@{/game/delete/{id}(id=${game.id})}" th:method="post">
 				  	  <!-- DELETE GAME BUTTON -->
                     <button class="btn btn-danger btn-sm">Delete</button>
 				  </form>
-                
                 </div>
               </td>
             </tr>

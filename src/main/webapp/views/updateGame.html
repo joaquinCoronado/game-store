@@ -62,35 +62,44 @@
       <!--------------------------------->
       <div class="content-container">
         <div class="add-game-form-container">
-          <form th:action="@{/game/list}">
+          <form th:action="@{/game/update}" th:method="post" th:object="${game}">
             <!-- TITLE -->
             <div class="mb-3 w-100">
               <label class="form-label" for="title">Title</label>
-              <input type="text" required class="form-control" id="title" />
+              <input th:field="*{title}" type="text" class="form-control" id="title" />
             </div>
 
             <!-- TYPE -->
             <div class="mb-3">
               <label class="form-label" for="type">Type</label>
-              <input required type="text" class="form-control" id="type" />
+              <input th:field="*{type}" type="text" class="form-control" id="type" />
             </div>
 
             <!-- PRICE -->
             <div class="mb-3">
               <label class="form-label" for="price">Price</label>
-              <input type="number" class="form-control" required id="price" />
+              <input th:field="*{price}" type="number" step="0.01" class="form-control" id="price" />
             </div>
 
             <!-- URL IMAGE -->
             <div class="mb-4">
               <label class="form-label" for="image">URL image</label>
-              <input required type="text" class="form-control" id="image" />
+              <input th:field="*{image}" type="text" class="form-control" id="image" />
             </div>
+            
+            <input type="hidden" th:field="*{id}">
 
             <!-- UPDATE GAME BUTTON -->
             <button type="submit" class="btn btn-primary w-100 mb-3">
               Update Game
             </button>
+            
+            <div class="alert alert-warning mt-2" th:if="${#fields.hasErrors()}" >
+            	<ul>
+            		<li th:each="err : ${#fields.errors()}" th:text="${err}" >
+            	</ul>
+            </div>
+            
           </form>
         </div>
       </div>

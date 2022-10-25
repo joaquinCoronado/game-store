@@ -66,25 +66,41 @@
             <!-- TITLE -->
             <div class="mb-3 w-100">
               <label class="form-label" for="title">Title</label>
-              <input th:field="*{title}" type="text" required class="form-control" id="title" />
+              <input th:field="*{title}" type="text" class="form-control" id="title" />
+              <div 
+              	class="alert alert-warning mt-1" 
+              	th:if="${#fields.hasErrors('title')}" 
+              	th:errors="*{title}" ></div>
             </div>
 
             <!-- TYPE -->
             <div class="mb-3">
               <label class="form-label" for="type">Type</label>
-              <input th:field="*{type}" required type="text" class="form-control" id="type" />
+              <input th:field="*{type}" type="text" class="form-control" id="type" />
+              <div 
+              	class="alert alert-warning mt-1" 
+              	th:if="${#fields.hasErrors('type')}" 
+              	th:errors="*{type}" ></div>
             </div>
 
             <!-- PRICE -->
             <div class="mb-3">
               <label class="form-label" for="price">Price</label>
-              <input th:field="*{price}" type="number" class="form-control" required id="price" />
+              <input th:field="*{price}" type="number" step="0.01" class="form-control" id="price" />
+              <div 
+              	class="alert alert-warning mt-1" 
+              	th:if="${#fields.hasErrors('price')}" 
+              	th:errors="*{price}" ></div>
             </div>
 
             <!-- URL IMAGE -->
             <div class="mb-4">
               <label class="form-label" for="image">URL image</label>
-              <input th:field="*{image}" required type="text" class="form-control" id="image" />
+              <input th:field="*{image}"  type="text" class="form-control" id="image" />
+              <div 
+              	class="alert alert-warning mt-1" 
+              	th:if="${#fields.hasErrors('image')}" 
+              	th:errors="*{image}" ></div>
             </div>
 
             <!-- SAVE GAME BUTTON -->

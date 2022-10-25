@@ -29,7 +29,6 @@ public class GameDaoTest {
 	@Qualifier("gameMySQLDao")
 	private IGameDao gameDao;
 	
-	
 	@Test
 	public void listAll() {
 		List<Game> games = gameDao.listAll();
