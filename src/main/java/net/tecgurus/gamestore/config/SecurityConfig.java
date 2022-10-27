@@ -73,7 +73,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.antMatchers("/game/create/**").hasRole("ADMIN")
 			.antMatchers("/**").hasAnyRole("ADMIN", "USER")
 			.and()
-				.formLogin()
+				.formLogin().loginPage("/login")
 			.and()
 				.logout()
 				.logoutSuccessUrl("/login");

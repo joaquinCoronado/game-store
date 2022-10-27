@@ -37,7 +37,7 @@ public class UserMySQLDaoImpl implements IUserDao{
 
 	@Override
 	public void create(User user) {
-		String query = "INSERT INTO users(name, password, enabled, created_at) VALUES(?, ?, ?, ?)";
+		String query = "INSERT INTO users(name, password, enabled, created_at, email) VALUES(?, ?, ?, ?, ?)";
 		
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		
@@ -48,6 +48,7 @@ public class UserMySQLDaoImpl implements IUserDao{
 				ps.setString(2, user.getPassword());
 				ps.setBoolean(3, user.getEnabled());
 				ps.setTimestamp(4, Timestamp.valueOf(user.getCreatedAt()));
+				ps.setString(5, user.getEmail());
 				return ps;
 			},
 			keyHolder

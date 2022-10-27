@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" 
+	xmlns:th="http://www.thymeleaf.org" 
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
   <head>
     <!-- METADATA -->
     <meta charset="utf-8" />
@@ -26,12 +28,13 @@
       <!-- USER INFORAMTION -->
       <div class="user-data-on-header-container">
         <!-- USER AND AUTHORITY -->
-        <span class="mx-3">Joaquin Coronado <strong>(ADMIN)</strong></span>
+        <span class="mx-3" sec:authentication="name"></span>
+        <strong>(ADMIN)</strong>
 
         <!------------------------------------->
         <!----------- LOGOUT BUTTON ----------->
         <!------------------------------------->
-        <form th:action="@{/login}">
+        <form th:action="@{/logout}" th:method="post">
           <button class="btn btn-light btn-sm">Logout</button>
         </form>
       </div>
