@@ -31,6 +31,11 @@
         <!----------- FORM ----------->
         <!---------------------------->
         <form th:action="@{/login}" th:method="post">
+        <div class="alert alert-danger" th:if="${param.error}">
+        	Invalid user name or password
+        </div>
+        	
+        
           <!-- EMAIL -->
           <div class="mb-3">
             <label class="form-label" for="exampleInputEmail1">Email address</label>

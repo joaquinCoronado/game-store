@@ -87,6 +87,18 @@
 			<version>4.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- AOP -->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjrt</artifactId>
+		    <version>1.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.5</version>
+		</dependency>
 
 		<!-- UTILS -->
 		<dependency>

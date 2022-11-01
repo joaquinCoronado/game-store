@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	
   <head>
     <!-- METADATA -->
     <meta charset="utf-8" />
@@ -18,23 +21,25 @@
     <!------------------------------>
     <!----------- HEADER ----------->
     <!------------------------------>
-    <div class="header">
+	<div class="header">
       <!-- LOGO -->
       <strong>GAME STORE</strong>
 
       <!-- USER INFORAMTION -->
       <div class="user-data-on-header-container">
         <!-- USER AND AUTHORITY -->
-        <span class="mx-3">Joaquin Coronado <strong>(ADMIN)</strong></span>
+        <span sec:authentication="name"></span>
+        <span class="ms-1" sec:authorize="hasRole('ROLE_ADMIN')"> <strong >(ADMIN)</strong> </span>
 
         <!------------------------------------->
         <!----------- LOGOUT BUTTON ----------->
         <!------------------------------------->
-        <form th:action="@{/logout}" th:method="post">
+        <form class="ms-3" th:action="@{/logout}" th:method="post">
           <button class="btn btn-light btn-sm">Logout</button>
         </form>
       </div>
     </div>
+	
 
     <!-------------------------------------->
     <!----------- MAIN CONTAINER ----------->
