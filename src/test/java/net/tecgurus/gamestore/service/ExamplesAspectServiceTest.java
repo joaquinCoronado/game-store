@@ -52,6 +52,34 @@ public class ExamplesAspectServiceTest {
 		service.greetingUser("Joaquin Coronado");
 	}
 	
+	@Test
+	public void addition() {
+		service.addition(4, 6);
+	}
+	
+	@Test
+	public void listUser() {
+		service.listUser().forEach(System.out::println);
+		
+		/*List<User> users = service.listUser();
+		
+		for(User user: users) {
+			System.out.println(user);
+		}*/
+		
+	}
+	
+	@Test
+	public void getUserEmail() {
+		User user = new User();
+		user.setEmail("joaquin@hotmail.com");
+		System.out.println(service.getUserEmail(user));
+	}
+	
+	@Test
+	public void getUserEmailWithNullUser() {
+		System.out.println(service.getUserEmail(null));
+	}
 	
 	
 	

@@ -28,7 +28,7 @@
       <!-- USER INFORAMTION -->
       <div class="user-data-on-header-container">
         <!-- USER AND AUTHORITY -->
-        <span sec:authentication="name"></span>
+        <span th:authentication="name"></span>
         <span class="ms-1" sec:authorize="hasRole('ROLE_ADMIN')"> <strong >(ADMIN)</strong> </span>
 
         <!------------------------------------->

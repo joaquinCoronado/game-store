@@ -5,7 +5,6 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -21,18 +20,9 @@ public class UserMySQLDaoImpl implements IUserDao{
 	private JdbcTemplate jdbcTemplate;
 	
 	@Override
-	public User getByEmail(String email) {
-		User user = null;
-		
+	public User getByEmail(String email) {	
 		String query = "SELECT * FROM users WHERE email = ?";
-		
-		try {
-			user = jdbcTemplate.queryForObject(query, new UserMapper(), email); 
-		} catch(EmptyResultDataAccessException e) {
-			e.printStackTrace();
-		}
-		
-		return user;
+		return jdbcTemplate.queryForObject(query, new UserMapper(), email);
 	}
 
 	@Override

@@ -28,17 +28,9 @@ public class GameMySQLDaoImpl implements IGameDao{
 	}
 
 	@Override
-	public Game getById(Long id) {
+	public Game getById(Long id) throws EmptyResultDataAccessException{
 		String query = "SELECT * FROM games WHERE id = ?";
-		Game game = null;
-		
-		try {
-			game = jdbcTemplate.queryForObject(query, new GameMapper(), id);
-		}catch(EmptyResultDataAccessException e) {
-			e.printStackTrace();
-		}
-		
-		return game;
+		return jdbcTemplate.queryForObject(query, new GameMapper(), id);
 	}
 
 	@Override

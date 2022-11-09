@@ -36,6 +36,12 @@ public class GameDaoTest {
 	}
 	
 	@Test
+	public void getByIdWithNullGame() {
+		Game game = gameDao.getById(1L);
+		System.out.println(game);
+	}
+	
+	@Test
 	public void getById() {
 		Game game = gameDao.getById(1L);
 		Assertions.assertNotNull(game);
