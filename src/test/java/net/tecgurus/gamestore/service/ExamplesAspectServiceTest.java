@@ -1,22 +1,19 @@
 package net.tecgurus.gamestore.service;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import net.tecgurus.gamestore.config.AOPConfig;
 import net.tecgurus.gamestore.config.WebAppConfig;
-import net.tecgurus.gamestore.model.User;
 
 @WebAppConfiguration
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration( classes = {WebAppConfig.class, AOPConfig.class})
 public class ExamplesAspectServiceTest {
 	
-	@Autowired
+	/*@Autowired
 	private ExamplesAspectService service;
 	
 	@Test
@@ -65,7 +62,7 @@ public class ExamplesAspectServiceTest {
 		
 		for(User user: users) {
 			System.out.println(user);
-		}*/
+		}
 		
 	}
 	
@@ -79,8 +76,6 @@ public class ExamplesAspectServiceTest {
 	@Test
 	public void getUserEmailWithNullUser() {
 		System.out.println(service.getUserEmail(null));
-	}
-	
-	
+	}*/
 	
 }

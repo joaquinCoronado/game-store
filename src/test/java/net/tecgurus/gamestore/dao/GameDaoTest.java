@@ -1,13 +1,6 @@
 package net.tecgurus.gamestore.dao;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -16,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import net.tecgurus.gamestore.config.SpringDataJDBCConfig;
 import net.tecgurus.gamestore.config.WebAppConfig;
-import net.tecgurus.gamestore.model.Game;
 
 @WebAppConfiguration
 @ExtendWith(SpringExtension.class)
@@ -25,7 +17,7 @@ import net.tecgurus.gamestore.model.Game;
 @Rollback
 public class GameDaoTest {
 	
-	@Autowired
+	/*@Autowired
 	@Qualifier("gameMySQLDao")
 	private IGameDao gameDao;
 	
@@ -96,17 +88,6 @@ public class GameDaoTest {
 		
 		Game deletedGame = gameDao.getById(game.getId());
 		Assertions.assertNull(deletedGame);
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	} */
 	
 }

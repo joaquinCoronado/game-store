@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  gamestore: 
+    container_name: gamestore
+    image: gamestore:v1
+    ports:
+      - 8080:8080
+    restart: always
